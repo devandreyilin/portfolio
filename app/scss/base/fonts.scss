@@ -1,0 +1,42 @@
+// 100 Thin, Hairline
+// 200 Extra Light, Ultra Light
+// 300 Light
+// 400 Regular or Normal
+// 500 Medium
+// 600 Semibold or Demibold
+// 700 Bold
+// 800 Extra Bold, Ultra Bold
+// 900 Black, Heavy
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+   url('../fonts/Roboto-Bold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
+   url('../fonts/Roboto-Italic.woff') format('woff');
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+   url('../fonts/Roboto-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('../fonts/Roboto-BoldItalic.woff2') format('woff2'),
+   url('../fonts/Roboto-BoldItalic.woff') format('woff');
+   font-weight: bold;
+   font-style: italic;
+}
+
