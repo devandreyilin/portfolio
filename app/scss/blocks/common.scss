@@ -1,3 +1,37 @@
+body {
+   &.ishome {
+      .page-header {
+         height: 100vh;
+         min-height: 400px;
+      }
+   }
+}
+
+/* Typography */
+.h1-title,
+.h2-title,
+.h3-title,
+.h4-title {
+   font-family: "Raleway", "Arial", sans-serif;
+}
+
+.h1-title {
+   font-size: 38px;
+   font-weight: 800;
+}
+.h2-title {
+   font-size: 30px;
+   font-weight: 800;
+}
+.h3-title {
+   font-size: 16px;
+   font-weight: 700;
+}
+.h4-title {
+   font-size: 22px;
+   font-weight: 300;
+}
+
 .button {
    display: inline-block;
    color: #fff;
@@ -30,27 +64,38 @@
    }
 }
 
-/* Typography */
-.h1-title,
-.h2-title,
-.h3-title,
-.h4-title {
-   font-family: "Raleway", sans-serif;
+.btn-scroll {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   cursor: pointer;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 180%;
+      height: 180%;
+      content: '';
+   }
 }
 
-.h1-title {
-   font-size: 38px;
-   font-weight: 800;
-}
-.h2-title {
-   font-size: 30px;
-   font-weight: 800;
-}
-.h3-title {
-   font-size: 16px;
-   font-weight: 700;
-}
-.h4-title {
-   font-size: 22px;
-   font-weight: 300;
+@keyframes move-arrow {
+   0% {
+      transform: translateY(-7px);
+      opacity: 1;
+   }
+   15% {
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(8px);
+      opacity: 0;
+   }
 }

@@ -1,0 +1,52 @@
+.page-header {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   background-attachment: fixed;
+   width: 100vw;
+   max-width: 100%;
+
+   &-flex {
+      display: flex;
+      position: relative;
+      top: 0;
+      height: 100%;
+      width: 100%;
+
+      .flex-center {
+         margin: auto;
+      }
+   }
+
+   &-composition {
+      text-align: center;
+      color: $text-light;
+
+      p {
+         font-size: 20px;
+         margin-bottom: 0;
+         font-weight: 300;
+      }
+
+      .h1-title {
+         display: block;
+         text-transform: uppercase;
+         font-weight: 800;
+         padding: 22px 0;
+         margin-bottom: 0;
+      }
+   }
+
+   &-scroll-down {
+      bottom: 25px;
+      left: calc(50% - 25px);
+      border: 2px solid #fff;
+      &:active, &:focus {
+         border: 2px solid #fff;
+      }
+      .icon-arrow {
+         font-size: 20px;
+         animation: move-arrow 2s normal infinite;
+      }
+   }
+}
