@@ -1,0 +1,56 @@
+.s-services {
+   &-skills {
+      margin-top: 50px;
+   }
+   &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 360px;
+      text-align: center;
+      background-color: $white;
+      transition: $trs;
+      .h3-title {
+         padding: 30px 0 12px;
+         margin-bottom: 0;
+      }
+      .icon {
+         font-size: 70px;
+      }
+      &:hover {
+         box-shadow:
+                 1px 1px $accent,
+                 2px 2px $accent,
+                 3px 3px $accent,
+                 4px 4px $accent,
+                 5px 5px $accent,
+                 6px 6px $accent,
+                 7px 7px $accent;
+         transform: translateX(-7px);
+      }
+   }
+   &__list {
+      font-family: $second-font;
+      font-weight: 300;
+   }
+   &__item {
+      padding: 4px 0;
+   }
+   &__to-example {
+      display: block;
+      margin: 25px auto 0;
+      text-align: center;
+      font-size: 14px;
+      padding: 2px 0;
+      text-transform: uppercase;
+      opacity: .6;
+      border-bottom: 1px dotted $text-dark;
+      transition: $trs;
+      &:hover {
+         color: $accent;
+         border-bottom: 1px dotted $accent;
+         opacity: 1;
+      }
+   }
+}

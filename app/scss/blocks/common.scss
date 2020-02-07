@@ -103,8 +103,9 @@ body {
    }
 }
 
+// Sections
 .s-{
-   &services {
+   &services, &portfolio {
       padding: 90px 0;
    }
    &services {
