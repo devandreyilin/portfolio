@@ -1,0 +1,39 @@
+.page-content {
+
+}
+
+.main-nav {
+   &-wrap {
+      width: 100%;
+      background-color: $white;
+   }
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__item {
+      &:hover {
+         .main-menu__link {
+            color: $accent;
+         }
+      }
+      &--active {
+         .main-menu__link {
+            color: $accent;
+         }
+      }
+   }
+   &__link {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 18px 14px;
+      transition: $trs;
+   }
+}

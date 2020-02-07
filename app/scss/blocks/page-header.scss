@@ -19,13 +19,17 @@
    }
 
    &-composition {
+      position: relative;
       text-align: center;
-      color: $text-light;
+      color: #fff;
 
       p {
          font-size: 20px;
          margin-bottom: 0;
          font-weight: 300;
+         @include media-breakpoint-down(xs) {
+            font-size: 19px;
+         }
       }
 
       .h1-title {
@@ -35,15 +39,38 @@
          padding: 22px 0;
          margin-bottom: 0;
       }
+      &:before, &:after {
+         position: absolute;
+         display: block;
+         content: '';
+         width: 30%;
+         height: 30%;
+      }
+      &:before {
+         top: 0;
+         left: 0;
+         border-top: 6px solid rgba(255,255,255, .9);
+         border-left: 6px solid rgba(255,255,255, .9);
+         transform: translate(-40px, -45px);
+      }
+      &:after {
+         bottom: 0;
+         right: 0;
+         border-bottom: 6px solid rgba(255,255,255, .9);
+         border-right: 6px solid rgba(255,255,255, .9);
+         transform: translate(40px, 45px);
+      }
    }
 
    &-scroll-down {
       bottom: 25px;
       left: calc(50% - 25px);
       border: 2px solid #fff;
+
       &:active, &:focus {
          border: 2px solid #fff;
       }
+
       .icon-arrow {
          font-size: 20px;
          animation: move-arrow 2s normal infinite;

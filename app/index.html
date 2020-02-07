@@ -36,11 +36,12 @@
 <div class="wrapper">
 
    <!-- .page-header -->
-   <header class="page-header" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('img/header.jpg');">
+   <header id="page-header" class="page-header"
+           style="background-image: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('img/header-bg.jpg');">
       <div class="page-header-flex">
          <div class="flex-center">
             <div class="page-header-composition">
-               <p>Привет, мое имя Андрей Ильин и я</p>
+               <p>Привет! Мое имя - Андрей Ильин, и я</p>
                <h1 class="h1-title">Full-Stack Разработчик</h1>
                <p>Создание современных и адаптивных веб-сайтов</p>
             </div>
@@ -58,7 +59,53 @@
 
    <!-- page-content -->
    <main class="page-content">
+      <nav class="main-nav-wrap">
+         <div class="container">
+            <div class="row">
+               <div class="col-12 main-nav">
+                  <a href="" class="main-logo">Logo</a>
+                  <!-- /.main-logo -->
+                  <ul class="main-menu">
+                     <li class="main-menu__item main-menu__item--active">
+                        <a href="#page-header" class="main-menu__link">Главная</a>
+                     </li>
+                     <li class="main-menu__item">
+                        <a href="#s-services" class="main-menu__link">Услуги</a>
+                     </li>
+                     <li class="main-menu__item">
+                        <a href="#" class="main-menu__link">Портфолио</a>
+                     </li>
+                     <li class="main-menu__item">
+                        <a href="#" class="main-menu__link">Контакты</a>
+                     </li>
+                  </ul>
+                  <!-- /.main-menu -->
+               </div>
+               <!-- /.col-12 -->
+            </div>
+            <!-- /.row -->
+         </div>
+         <!-- /.container -->
+      </nav>
+      <!-- /.main-navigation -->
+      <section id="s-services" class="s-services" style="background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),url('img/gray.png');">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="section-composition">
+                     <h2 class="h2-title">Мои услуги</h2>
+                     <p class="subhead">Проектирование <span>лендинга</span>, <span>сайта-визитки</span> и <span>интернет-магазина</span><br>с последующей посадкой на CMS WordPress</p>
+                  </div>
+                  <!-- /.section-composition-->
 
+               </div>
+               <!-- /.col-12 -->
+            </div>
+            <!-- /.row -->
+         </div>
+         <!-- /.container -->
+      </section>
+      <!-- /#services.services -->
    </main>
    <!-- /.page-content -->
 
