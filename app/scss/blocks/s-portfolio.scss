@@ -1,0 +1,35 @@
+.s-portfolio {
+   &-box {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      color: $text-light;
+      transition: $trs;
+
+      &:hover {
+         color: $text-light;
+      }
+
+      &__h4-title,
+      &__test-ex,
+      &__action {
+         position: absolute;
+         left: 50%;
+         transform: translate3d(-50%, 0, 0);
+         will-change: transform;
+      }
+
+      &__h4-title {
+         top: 25px;
+      }
+
+      &__test-ex {
+         top: 48px;
+      }
+
+      &__action {
+         bottom: 10px;
+      }
+   }
+
+}

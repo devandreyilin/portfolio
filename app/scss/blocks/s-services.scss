@@ -1,9 +1,5 @@
 .s-services {
-   &-skills {
-      margin-top: 50px;
-   }
-
-   &__card {
+   &-card {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -13,10 +9,20 @@
       background-color: $white;
       transition: $trs;
 
-      .h3-title {
+      &__h3-title {
          padding: 30px 0 12px;
          margin-bottom: 0;
       }
+
+      &__list {
+         font-family: $second-font;
+         font-weight: 300;
+      }
+
+      &__item {
+         padding: 4px 0;
+      }
+
 
       .icon {
          font-size: 70px;
@@ -31,33 +37,6 @@
          6px 6px rgba(231, 116, 111, .8),
          7px 7px rgba(231, 116, 111, .8);
          transform: translateX(-7px);
-      }
-   }
-
-   &__list {
-      font-family: $second-font;
-      font-weight: 300;
-   }
-
-   &__item {
-      padding: 4px 0;
-   }
-
-   &__to-example {
-      display: block;
-      margin: 25px auto 0;
-      text-align: center;
-      font-size: 14px;
-      padding: 2px 0;
-      text-transform: uppercase;
-      opacity: .6;
-      border-bottom: 1px dotted $text-dark;
-      transition: $trs;
-
-      &:hover {
-         color: $accent;
-         border-bottom: 1px dotted $accent;
-         opacity: 1;
       }
    }
 }

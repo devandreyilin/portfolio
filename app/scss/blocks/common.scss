@@ -22,14 +22,17 @@ body {
    font-size: 38px;
    font-weight: 800;
 }
+
 .h2-title {
    font-size: 30px;
    font-weight: 800;
 }
+
 .h3-title {
    font-size: 16px;
    font-weight: 700;
 }
+
 .h4-title {
    font-size: 22px;
    font-weight: 300;
@@ -77,6 +80,7 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 50%;
+
    &:after {
       position: absolute;
       top: 50%;
@@ -104,10 +108,15 @@ body {
 }
 
 // Sections
-.s-{
+.s- {
    &services, &portfolio {
       padding: 90px 0;
+
+      &-row {
+         margin-top: 50px;
+      }
    }
+
    &services {
       background-repeat: repeat;
       background-size: initial;
@@ -116,24 +125,28 @@ body {
 
 .section-composition {
    text-align: center;
+
    .h2-title {
       padding-bottom: 32px;
       margin-bottom: 0;
+
       &:after {
          display: block;
          content: '';
          height: 1px;
          width: 136px;
          margin: 22px auto 0;
-         background-color: rgba(135,135,135,.5);
+         background-color: rgba(135, 135, 135, .5);
       }
    }
+
    .subhead {
       max-width: 570px;
       font-size: 19px;
       font-family: $second-font;
       margin: auto;
       font-weight: 300;
+
       > span {
          white-space: nowrap;
          color: $accent;
