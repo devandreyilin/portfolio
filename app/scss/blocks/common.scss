@@ -47,17 +47,20 @@ body {
 
 .button {
    display: inline-block;
+   width: 100%;
    color: #fff;
-   background-color: $accent;
-   padding: 15px 45px;
-   font-size: 13px;
+   background-color: lighten($text-dark, 5%);
+   padding: 13px 45px;
+   font-size: 14px;
+   letter-spacing: 0.8px;
    text-transform: uppercase;
-   font-weight: 700;
+   font-weight: 400;
    border-radius: 2px;
    text-align: center;
    position: relative;
    transition: $trs;
    cursor: pointer;
+   border: none;
 
    &:focus, &:hover {
       text-decoration: none;
@@ -65,15 +68,11 @@ body {
    }
 
    &:hover {
-      background-color: lighten($accent, 5%);
-
-      &::after {
-         opacity: .22;
-      }
+      background-color: $text-dark;
    }
 
    &:active {
-      background-color: darken($accent, 5%);
+      background-color: darken($text-dark, 3%);
    }
 }
 
@@ -102,14 +101,14 @@ body {
 
 @keyframes move-arrow {
    0% {
-      transform: translateY(-7px);
+      transform: translate3d(0, -7px, 0);
       opacity: 1;
    }
    15% {
       opacity: 1;
    }
    100% {
-      transform: translateY(8px);
+      transform: translate3d(0, 8px, 0);
       opacity: 0;
    }
 }
@@ -117,11 +116,15 @@ body {
 // Sections
 .s- {
    &services, &portfolio, &callback {
-      padding: 90px 0;
+      padding: 80px 0 100px;
 
       &-row {
          margin-top: 50px;
       }
+   }
+
+   &callback {
+      padding: 80px 0 140px;
    }
 
    &services, &callback {
@@ -154,7 +157,7 @@ body {
       font-weight: 300;
       line-height: 1.3;
 
-       span {
+      span {
          white-space: nowrap;
          color: $accent;
       }

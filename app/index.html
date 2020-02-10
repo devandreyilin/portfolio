@@ -152,7 +152,8 @@
       <section id="s-portfolio" class="s-portfolio">
          <div class="section-composition">
             <h2 class="h2-title">Примеры работ</h2>
-            <p class="subhead">Ниже представлены примеры моих работ. Кликнув по ним,<br> вы сможете разглядеть их подробнее</p>
+            <p class="subhead">Ниже представлены примеры моих работ. Кликнув по ним,<br> вы сможете разглядеть их
+               подробнее</p>
          </div>
          <!-- /.section-composition-->
 
@@ -179,12 +180,44 @@
          <!-- /.section-composition-->
       </section>
       <!-- /#s-portfolio.s-portfolio -->
-      <section id="s-callback" class="s-callback" style="background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),url('./img/gray.png');">
+      <section id="s-callback" class="s-callback"
+               style="background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),url('./img/gray.png');">
          <div class="section-composition">
             <h2 class="h2-title">Свяжитесь со мной</h2>
-            <p class="subhead">Если у вас возникло желание к сотрудничеству, заполните форму ниже, пожалуйста. Либо Вы можете связаться со мной напрямую через почту: <a href="mailto:dev.andreyilin@gmail.com" class="s-callback__mail-address"><span>dev.andreyilin@gmail.com</span></a></p>
+            <p class="subhead">Если у вас возникло желание к сотрудничеству, заполните форму ниже, пожалуйста. Либо Вы
+               можете связаться со мной напрямую через почту: <a href="mailto:dev.andreyilin@gmail.com"
+                                                                 class="s-callback__mail-address"><span>dev.andreyilin@gmail.com</span></a>
+            </p>
          </div>
          <!-- /.section-composition-->
+
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 offset-lg-3">
+                  <form id="form" class="s-callback-form">
+                     <input type="text" name="name" class="s-callback-form__field"
+                            placeholder="Ваша почта...">
+                     <input type="text" name="mail" class="s-callback-form__field"
+                            placeholder="Ваша почта...">
+                     <select name="services" id="selectize"
+                             class="s-callback-form__field s-callback-form__select">
+                        <option value disabled selected>Тема письма...</option>
+                        <option>Сотрудничество</option>
+                        <option>Вопрос</option>
+                        <option>Сказать &laquo;привет&raquo;</option>
+                        <option>Другое</option>
+                     </select>
+                     <textarea class="s-callback-form__field" name="message" rows="5"
+                               placeholder="Текст сообщения..."></textarea>
+                     <input type="submit" class="button" value="Отправить">
+                  </form>
+                  <!-- /#form.s-callback__form -->
+               </div>
+               <!-- /.col-lg-6 offset-lg-3 -->
+            </div>
+            <!-- /.row -->
+         </div>
+         <!-- /.container -->
       </section>
       <!-- /#s-callback.s-callback -->
    </main>
@@ -192,7 +225,9 @@
 
    <!-- .page-footer -->
    <footer class="page-footer">
-
+      <div class="copyright">
+         <p>©2020<span>Андрей Ильин</span></p>
+      </div>
    </footer>
    <!-- /.page-footer -->
 
