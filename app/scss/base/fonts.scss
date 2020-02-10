@@ -62,11 +62,11 @@
 // Icomoon
 @font-face {
    font-family: 'icomoon';
-   src:  url('../fonts/icomoon/icomoon.eot?g4lw8w');
-   src:  url('../fonts/icomoon/icomoon.eot?g4lw8w#iefix') format('embedded-opentype'),
-   url('../fonts/icomoon/icomoon.ttf?g4lw8w') format('truetype'),
-   url('../fonts/icomoon/icomoon.woff?g4lw8w') format('woff'),
-   url('../fonts/icomoon/icomoon.svg?g4lw8w#icomoon') format('svg');
+   src:  url('../fonts/icomoon/icomoon.eot?g41cyy');
+   src:  url('../fonts/icomoon/icomoon.eot?g41cyy#iefix') format('embedded-opentype'),
+   url('../fonts/icomoon/icomoon.ttf?g41cyy') format('truetype'),
+   url('../fonts/icomoon/icomoon.woff?g41cyy') format('woff'),
+   url('../fonts/icomoon/icomoon.svg?g41cyy#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
    font-display: block;
@@ -87,22 +87,18 @@
    -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-vk:before {
+.icon-arrow:before {
    content: "\e900";
 }
-.icon-puzzle:before {
+.icon-click:before {
    content: "\e901";
 }
-.icon-instagram:before {
+.icon-puzzle:before {
    content: "\e902";
 }
 .icon-gear:before {
    content: "\e903";
 }
-.icon-arrow:before {
-   content: "\e904";
-   color: #fff;
-}
 .icon-additionally:before {
-   content: "\e905";
+   content: "\e904";
 }

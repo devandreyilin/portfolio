@@ -2,34 +2,96 @@
    &-box {
       position: relative;
       width: 100%;
-      height: 220px;
+      height: 215px;
       color: $text-light;
+      overflow: hidden;
+      background-color: #000;
       transition: $trs;
+      border-radius: 2px;
 
-      &:hover {
-         color: $text-light;
+      &__img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         transition: $trs;
+         opacity: .9;
       }
 
       &__h4-title,
       &__test-ex,
       &__action {
          position: absolute;
-         left: 50%;
-         transform: translate3d(-50%, 0, 0);
+         left: 0;
+         transform: translate3d(0, 0, 0);
          will-change: transform;
+         transition: $trs;
+         opacity: .9;
+         width: 100%;
+         text-align: center;
       }
 
       &__h4-title {
          top: 25px;
+
+         span {
+            font-weight: 700;
+
+            &:before {
+               content: ' ';
+            }
+         }
       }
 
       &__test-ex {
-         top: 48px;
+         top: 50px;
+         font-family: $second-font;
       }
 
       &__action {
-         bottom: 10px;
+         bottom: 40px;
+         opacity: 0;
+         font-size: 18px;
+      }
+
+      &__icon {
+         position: absolute;
+         top: calc(50% - 18px);
+         left: calc(50% - 18px);
+         user-select: none;
+         font-size: 36px;
+         opacity: 0;
+         transition: $trs;
+         color: $accent;
+      }
+
+      &:hover {
+         color: $text-light;
+
+         .s-portfolio-box__img {
+            filter: blur(2px);
+            opacity: .8;
+         }
+
+         .s-portfolio-box__h4-title {
+            transform: translate3d(0, 12px, 0);
+            opacity: 1;
+         }
+
+         .s-portfolio-box__test-ex {
+            transform: translate3d(0, 12px, 0);
+            opacity: 1;
+         }
+
+         .s-portfolio-box__action {
+            transform: translate3d(0, -12px, 0);
+            opacity: 1;
+         }
+
+         .s-portfolio-box__icon {
+            opacity: 1;
+         }
       }
    }
-
 }

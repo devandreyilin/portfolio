@@ -37,13 +37,14 @@
 
    <!-- .page-header -->
    <header id="page-header" class="page-header"
-           style="background-image: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('img/header-bg.jpg');">
+           style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('./img/header-bg.jpg');">
       <div class="page-header-flex">
          <div class="flex-center">
             <div class="page-header-composition">
                <p>Привет! Мое имя - Андрей Ильин, и я</p>
                <h1 class="h1-title">Full-Stack Разработчик</h1>
                <p>Создание современных и адаптивных веб-сайтов</p>
+               <div class="icon-vk"></div>
             </div>
             <!-- /.page-header-composition -->
          </div>
@@ -89,7 +90,7 @@
       </nav>
       <!-- /.main-navigation -->
       <section id="s-services" class="s-services"
-               style="background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),url('img/gray.png');">
+               style="background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),url('./img/gray.png');">
          <div class="section-composition">
             <h2 class="h2-title">Мои услуги</h2>
             <p class="subhead">Проектирование <span>лендинга</span>, <span>сайта-визитки</span> и <span>интернет-магазина</span><br>с
@@ -151,8 +152,7 @@
       <section id="s-portfolio" class="s-portfolio">
          <div class="section-composition">
             <h2 class="h2-title">Примеры работ</h2>
-            <p class="subhead">Ниже представлены примеры моих работ. Кликнув по ним,<br> вы сможете разглядеть их
-               подробнее</p>
+            <p class="subhead">Ниже представлены примеры моих работ. Кликнув по ним,<br> вы сможете разглядеть их подробнее</p>
          </div>
          <!-- /.section-composition-->
 
@@ -160,10 +160,12 @@
             <div class="row s-portfolio-row">
                <div class="col-xl-4">
                   <a href="/demo/pizza/" class="s-portfolio-box"
-                     target="_blank" style="background-image: url('img/item-1.jpg');">
+                     target="_blank">
+                     <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
                      <h4 class="h4-title s-portfolio-box__h4-title">Брендинговое<span>Агенство</span></h4>
                      <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
                      <p class="s-portfolio-box__action">Кликните для перехода</p>
+                     <span class="icon-click s-portfolio-box__icon"></span>
                   </a>
                </div>
                <!-- /.col-xl-4 -->
@@ -171,8 +173,20 @@
             <!-- /.row -->
          </div>
          <!-- /.container -->
+         <div class="section-composition s-portfolio__section-composition">
+            <p class="subhead"><span>*сделанные с превеликим удовольствием</span> и общепринятым стандартом W3C</p>
+         </div>
+         <!-- /.section-composition-->
       </section>
       <!-- /#s-portfolio.s-portfolio -->
+      <section id="s-callback" class="s-callback" style="background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),url('./img/gray.png');">
+         <div class="section-composition">
+            <h2 class="h2-title">Свяжитесь со мной</h2>
+            <p class="subhead">Если у вас возникло желание к сотрудничеству, заполните форму ниже, пожалуйста. Либо Вы можете связаться со мной напрямую через почту: <a href="mailto:dev.andreyilin@gmail.com" class="s-callback__mail-address"><span>dev.andreyilin@gmail.com</span></a></p>
+         </div>
+         <!-- /.section-composition-->
+      </section>
+      <!-- /#s-callback.s-callback -->
    </main>
    <!-- /.page-content -->
 
