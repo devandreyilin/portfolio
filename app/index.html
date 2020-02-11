@@ -194,10 +194,10 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-6 offset-lg-3">
-                  <form id="form" class="s-callback-form">
+                  <form id="form-callback" class="s-callback-form">
                      <input type="text" name="name" class="s-callback-form__field"
-                            placeholder="Ваша почта...">
-                     <input type="text" name="mail" class="s-callback-form__field"
+                            placeholder="Ваше имя...">
+                     <input type="email" name="email" class="s-callback-form__field"
                             placeholder="Ваша почта...">
                      <select name="services" id="selectize"
                              class="s-callback-form__field s-callback-form__select">
@@ -210,6 +210,11 @@
                      <textarea class="s-callback-form__field" name="message" rows="5"
                                placeholder="Текст сообщения..."></textarea>
                      <input type="submit" class="button" value="Отправить">
+
+                     <div class="s-callback-form__success">
+                        <p>Ваше сообщение было успешно отправлено.</p>
+                     </div>
+                     <!-- /.success -->
                   </form>
                   <!-- /#form.s-callback__form -->
                </div>
@@ -218,6 +223,7 @@
             <!-- /.row -->
          </div>
          <!-- /.container -->
+
       </section>
       <!-- /#s-callback.s-callback -->
    </main>
