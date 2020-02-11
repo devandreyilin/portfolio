@@ -6,9 +6,6 @@ $mail = trim($_POST["email"]);
 $services = trim($_POST["services"]);
 $message = trim($_POST["message"]);
 
-
-
-
 $pattern = "/(content-type|bcc:|cc:|to:)/i";
 
 $to = 'dev.andreyilin@gmail.com';
@@ -19,4 +16,9 @@ $body = "Имя: $name<br>Почта: $mail<br>Услуга: $services<br>Соо
 $headers = "From: admin@devandreyilin.ru" ."\r\n";
 $headers .= "Content-type: text/html; charset=utf-8\r\n";
 // PHP email sender
-mail($to, $sub , $body, $headers);
+
+if (mail($to, $sub , $body, $headers)) {
+   echo "SUCCESS";
+} else {
+   echo "ERROR";
+}

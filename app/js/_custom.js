@@ -25,12 +25,12 @@ $(function () {
          }
       });
 
-      //E-mail Ajax Send
+      // E-mail Ajax Send
       $(form).submit(function () { //Change
          let th = $(this);
          $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
          }).done(function () {
             successDiv.addClass('s-callback-form__success--visible');
@@ -88,9 +88,9 @@ $(function () {
          let scrollTop = $(window).scrollTop(),
              winHeight = $(window).height(),
              pageHeader = $('#page-header').offset().top,
-             section1 = $('#s-services').offset().top - (winHeight - (winHeight * 0.3)),
-             section2 = $('#s-portfolio').offset().top - (winHeight - (winHeight * 0.3)),
-             section3 = $('#s-callback').offset().top - (winHeight - (winHeight * 0.3)),
+             section1 = $('#s-services').offset().top - (winHeight * 0.3),
+             section2 = $('#s-portfolio').offset().top - (winHeight * 0.3),
+             section3 = $('#s-callback').offset().top - (winHeight * 0.3),
              pageFooter = $('#page-footer').offset().top;
          console.log(winHeight);
 
