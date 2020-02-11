@@ -12,10 +12,10 @@ let gulp = require('gulp'),
 
 gulp.task('browser-sync', function () {
    browserSync({
-      // proxy: "domain.local",
-      server: {
-         baseDir: './app'
-      },
+      proxy: "web-dev.local",
+      // server: {
+      //    baseDir: './app'
+      // },
       notify: false,
       ghostMode: false,
       open: false,
