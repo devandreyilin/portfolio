@@ -14,6 +14,16 @@
       top: 0;
       z-index: 2;
    }
+   &__logo {
+      font-family: $third-font;
+      font-size: 20px;
+      text-transform: uppercase;
+      transition: $trs;
+
+      &:hover {
+         color: $accent;
+      }
+   }
 }
 
 .main-menu {

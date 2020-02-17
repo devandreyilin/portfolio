@@ -46,8 +46,6 @@ $(function () {
          });
          return false;
       });
-
-
    }
 
    callbackForm('#form-callback', '.s-callback-form__success');
