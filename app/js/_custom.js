@@ -1,10 +1,7 @@
 $(function () {
 
    // Selectize
-   let $select = $('#selectize').selectize({
-      create: true,
-      sortField: 'text'
-   });
+   let $select = $('#selectize').selectize();
 
 
    function callbackForm(form, success) {
