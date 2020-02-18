@@ -114,13 +114,13 @@ $(function () {
       itemHighlight();
    }
 
-   function copyright() {
+   function copyrightChangeYear() {
       let year = new Date().getFullYear(),
           yearBlock = $('.page-footer .copyright .year');
 
       yearBlock.html(year);
    }
-   copyright();
+   copyrightChangeYear();
 
    menuSettings();
 
