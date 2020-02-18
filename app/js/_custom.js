@@ -114,6 +114,14 @@ $(function () {
       itemHighlight();
    }
 
+   function copyright() {
+      let year = new Date().getFullYear(),
+          yearBlock = $('.page-footer .copyright .year');
+
+      yearBlock.html(year);
+   }
+   copyright();
+
    menuSettings();
 
 
