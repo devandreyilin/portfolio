@@ -3,10 +3,9 @@ $(function () {
    // Selectize
    let $select = $('#selectize').selectize();
 
-
-   function callbackForm(form, success) {
+   function callbackForm(success) {
       // Модальное окно при успешной отработке формы
-      let successDiv = $(success);
+      let successDiv = $('.s-callback-form__success');
       successDiv.on('click', function (e) {
          let th = $(this);
          if (th.hasClass('s-callback-form__success--visible')) {
@@ -23,7 +22,7 @@ $(function () {
       });
 
       // E-mail Ajax Send
-      $(form).submit(function () { //Change
+      $('#form-callback').submit(function () { //Change
          let th = $(this);
          $.ajax({
             type: "POST",
@@ -45,7 +44,7 @@ $(function () {
       });
    }
 
-   callbackForm('#form-callback', '.s-callback-form__success');
+   callbackForm();
 
    // Настройка меню
    function menuSettings() {
@@ -77,7 +76,10 @@ $(function () {
 
       // Подсветка пунктов меню
       $(window).on('scroll', itemHighlight);
+      $(window).on('scroll', addShadowToMenuWrap);
+
       let activeClass = 'main-menu__item--active';
+      let navWrap = $('.main-nav-wrap');
 
       function itemHighlight() {
          let scrollTop = $(window).scrollTop(),
@@ -87,8 +89,6 @@ $(function () {
              section2 = $('#s-portfolio').offset().top - (winHeight * 0.3),
              section3 = $('#s-callback').offset().top - (winHeight * 0.3),
              pageFooter = $('#page-footer').offset().top;
-         console.log(winHeight);
-
 
          // Проверка положения секции относительно других и добавление подсветки
          if (scrollTop >= pageHeader && scrollTop < section1) {
@@ -108,7 +108,16 @@ $(function () {
          }
       }
 
+      function addShadowToMenuWrap() {
+         if ($(window).scrollTop() > (navWrap.offset().top - navWrap.height())) {
+            navWrap.css('boxShadow','0 2px 2px rgba(0,0,0,.25)');
+         } else {
+            navWrap.css('boxShadow','none');
+         }
+      }
+
       itemHighlight();
+      addShadowToMenuWrap()
    }
 
    function copyrightChangeYear() {
@@ -117,9 +126,8 @@ $(function () {
 
       yearBlock.html(year);
    }
+
+
    copyrightChangeYear();
-
    menuSettings();
-
-
 });
