@@ -30,6 +30,10 @@
          @include media-breakpoint-down(xs) {
             font-size: 19px;
          }
+         @include media-breakpoint-down(sm) {
+            line-height: 1.4;
+            font-weight: 400;
+         }
       }
 
       .h1-title {
@@ -46,6 +50,9 @@
          content: '';
          width: 30%;
          height: 30%;
+         @include media-breakpoint-down(sm) {
+            display: none;
+         }
       }
 
       &:before {

@@ -14,6 +14,7 @@
       top: 0;
       z-index: 2;
    }
+
    &__logo {
       font-family: $third-font;
       font-size: 20px;
@@ -22,6 +23,14 @@
 
       &:hover {
          color: $accent;
+      }
+
+      @include media-breakpoint-down(md) {
+         font-size: 19px;
+      }
+
+      @include media-breakpoint-down(sm) {
+         display: none;
       }
    }
 }
@@ -51,5 +60,15 @@
       font-size: 14px;
       padding: 17px 16px;
       transition: $trs;
+      @include media-breakpoint-down(md) {
+         padding: 17px 13px;
+      }
+   }
+
+   @include media-breakpoint-down(md) {
+      margin: auto;
+   }
+   @include media-breakpoint-down(xs) {
+      flex-direction: column;
    }
 }
