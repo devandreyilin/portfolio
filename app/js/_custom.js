@@ -116,7 +116,7 @@ $(function () {
 
       function addShadowToMenuWrap() {
          if ($(window).scrollTop() > (navWrap.offset().top - navWrap.height())) {
-            navWrap.css('boxShadow', '0 2px 2px rgba(0,0,0,.25)');
+            navWrap.css('boxShadow', '0 1px 6px rgba(0,0,0,.2)');
          } else {
             navWrap.css('boxShadow', 'none');
          }
