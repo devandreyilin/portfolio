@@ -5,6 +5,9 @@
    background-attachment: fixed;
    width: 100vw;
    max-width: 100%;
+   @include media-breakpoint-down(sm) {
+      background-attachment: initial;
+   }
 
    &-flex {
       display: flex;

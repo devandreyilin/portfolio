@@ -34,6 +34,7 @@
 <body class="ishome">
 <!-- .wrapper -->
 <div class="wrapper">
+   <div id="overlay" class="overlay"></div>
 
    <!-- .page-header -->
    <header id="page-header" class="page-header"
@@ -60,14 +61,15 @@
 
    <!-- page-content -->
    <main id="page-content" class="page-content">
-      <nav class="main-nav-wrap">
+      <nav id="main-nav" class="main-nav">
          <div class="container">
             <div class="row">
-               <div class="col-12 main-nav">
-                  <button id="menu-button"
-                          class="menu-button"><span></span></button>
+               <div class="col-12 main-nav-wrap">
                   <p class="main-nav__logo">{ Веб-разработка }</p>
                   <!-- /.main-logo -->
+
+                  <button id="menu-button"
+                          class="menu-button"><span></span></button>
                   <ul class="main-menu">
                      <li class="main-menu__item">
                         <a href="#page-header" class="main-menu__link">Главная</a>
@@ -102,7 +104,7 @@
 
          <div class="container">
             <div class="row s-services-row">
-               <div class="col-xl-4">
+               <div class="col-lg-4 col-md-6">
                   <div class="s-services-card">
                      <i class="icon-puzzle icon"></i>
                      <h3 class="h3-title s-services-card__h3-title">Верстка</h3>
@@ -117,7 +119,7 @@
                   <!-- /.s-services-card -->
                </div>
                <!-- /.col-xl-4 -->
-               <div class="col-xl-4">
+               <div class="col-lg-4 col-md-6">
                   <div class="s-services-card">
                      <i class="icon-gear icon"></i>
                      <h3 class="h3-title s-services-card__h3-title">Программирование</h3>
@@ -131,7 +133,7 @@
                   <!-- /.s-services-card -->
                </div>
                <!-- /.col-xl-4 -->
-               <div class="col-xl-4">
+               <div class="col-lg-4">
                   <div class="s-services-card">
                      <i class="icon-additionally icon"></i>
                      <h3 class="h3-title s-services-card__h3-title">Дополнительно</h3>
@@ -161,7 +163,27 @@
 
          <div class="container">
             <div class="row s-portfolio-row">
-               <div class="col-xl-4">
+               <div class="col-lg-4 col-md-6 col-sm-8 offset-2 offset-sm-0">
+                  <a href="/demo/pizza/" class="s-portfolio-box"
+                     target="_blank">
+                     <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
+                     <h4 class="h4-title s-portfolio-box__h4-title">Брендинговое<span>Агенство</span></h4>
+                     <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
+                     <p class="s-portfolio-box__action">Кликните для перехода</p>
+                     <span class="icon-click s-portfolio-box__icon"></span>
+                  </a>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-8 offset-2 offset-sm-0">
+                  <a href="/demo/pizza/" class="s-portfolio-box"
+                     target="_blank">
+                     <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
+                     <h4 class="h4-title s-portfolio-box__h4-title">Брендинговое<span>Агенство</span></h4>
+                     <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
+                     <p class="s-portfolio-box__action">Кликните для перехода</p>
+                     <span class="icon-click s-portfolio-box__icon"></span>
+                  </a>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-8 offset-2 offset-sm-0">
                   <a href="/demo/pizza/" class="s-portfolio-box"
                      target="_blank">
                      <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">

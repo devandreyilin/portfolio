@@ -2,7 +2,7 @@ body {
    &.ishome {
       .page-header {
          height: 100vh;
-         min-height: 420px;
+         min-height: 500px;
       }
    }
 }
@@ -135,6 +135,7 @@ body {
 
 .section-composition {
    text-align: center;
+   padding: 0 15px;
 
    .h2-title {
       margin-bottom: 0;
@@ -146,6 +147,9 @@ body {
          width: 136px;
          margin: 22px auto 0;
          background-color: rgba(135, 135, 135, .5);
+      }
+      @include media-breakpoint-down(xs) {
+         line-height: 1.2;
       }
    }
 
@@ -160,6 +164,9 @@ body {
       span {
          white-space: nowrap;
          color: $accent;
+         @include media-breakpoint-down(sm) {
+            white-space: initial;
+         }
       }
    }
 }
@@ -170,7 +177,7 @@ body {
    justify-content: center;
    align-items: center;
    position: fixed;
-   right: 15px;
+   right: 10px;
    top: 15px;
    width: 55px;
    height: 55px;
@@ -178,9 +185,9 @@ body {
    border-radius: 50%;
    background-color: $accent;
    cursor: pointer;
-   z-index: 8;
+   z-index: 4;
    transition: $trs;
-   @include media-breakpoint-down(sm) {
+   @include media-breakpoint-down(xs) {
       display: flex;
       opacity: 1;
    }
@@ -207,7 +214,7 @@ body {
          top: 7px;
       }
    }
-   &--show {
+   &--visible {
       span {
          transform: rotate(45deg);
          &:before {
@@ -219,5 +226,25 @@ body {
             transform: rotate(90deg);
          }
       }
+   }
+}
+
+.overlay {
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   background-color: #333;
+   opacity: 0;
+   user-select: none;
+   &--visible {
+      z-index: 2;
+      opacity: .6;
+      user-select: initial;
    }
 }
