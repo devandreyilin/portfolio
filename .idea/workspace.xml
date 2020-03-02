@@ -1,16 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a13b0a8-0ff3-45a1-9162-8d5e91f4eb57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/blocks/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/blocks/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/blocks/main-nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/blocks/main-nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/blocks/page-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/blocks/page-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/blocks/s-services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/blocks/s-services.scss" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="ComposerSettings">
     <execution>
       <executable />
     </execution>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="portfolio" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XLfSZSz5bedgmUSDDE6hYtLJMn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pizza" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a13b0a8-0ff3-45a1-9162-8d5e91f4eb57" name="Default Changelist" comment="" />
+      <created>1580830296177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580830296177</updated>
+      <workItem from="1580830298902" duration="424000" />
+      <workItem from="1580860044638" duration="5382000" />
+      <workItem from="1580907788954" duration="478000" />
+      <workItem from="1580917559946" duration="7512000" />
+      <workItem from="1581059342755" duration="139000" />
+      <workItem from="1581059500528" duration="95000" />
+      <workItem from="1581059614029" duration="11589000" />
+      <workItem from="1581079941499" duration="4468000" />
+      <workItem from="1581159782713" duration="448000" />
+      <workItem from="1581263916263" duration="7684000" />
+      <workItem from="1581288059194" duration="6057000" />
+      <workItem from="1581353762888" duration="5524000" />
+      <workItem from="1581405950626" duration="4098000" />
+      <workItem from="1581410864308" duration="6831000" />
+      <workItem from="1581429496328" duration="3116000" />
+      <workItem from="1581438061284" duration="40000" />
+      <workItem from="1581942689018" duration="1907000" />
+      <workItem from="1581993482572" duration="377000" />
+      <workItem from="1581993875971" duration="56000" />
+      <workItem from="1582047514140" duration="227000" />
+      <workItem from="1582136714943" duration="2073000" />
+      <workItem from="1582377865743" duration="2310000" />
+      <workItem from="1582587387802" duration="539000" />
+      <workItem from="1582904396309" duration="3262000" />
+      <workItem from="1583054458917" duration="5474000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

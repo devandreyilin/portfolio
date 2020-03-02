@@ -1,7 +1,14 @@
 $(function () {
 
    // Selectize
-   const $select = $('#selectize').selectize();
+   const $select = $('#selectize').selectize({
+      create: true
+   });
+   // Очистка кэша
+   let control = $select[0].selectize;
+   control.clear();
+   // Отчключение input
+   $('.selectize-input input').prop('disabled', true);
 
    function callbackForm() {
       // Модальное окно при успешной отработке формы

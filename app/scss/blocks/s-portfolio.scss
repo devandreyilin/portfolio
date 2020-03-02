@@ -1,4 +1,5 @@
 .s-portfolio {
+
    &-box {
       position: relative;
       width: 100%;
@@ -17,6 +18,10 @@
          bottom: 0;
          transition: $trs;
          opacity: .9;
+         @include media-breakpoint-down(md) {
+            filter: blur(2px);
+            opacity: .8;
+         }
       }
 
       &__h4-title,
@@ -41,18 +46,45 @@
             &:before {
                content: ' ';
             }
+
+            @media screen and (max-width: 400px) {
+               display: block;
+            }
+         }
+
+         @include media-breakpoint-down(md) {
+            transform: translate3d(0, 12px, 0);
+            opacity: 1;
+         }
+         @media screen and (max-width: 400px) {
+            top: 5px;
+            line-height: 1.2;
          }
       }
 
       &__test-ex {
          top: 50px;
          font-family: $second-font;
+         @include media-breakpoint-down(md) {
+            transform: translate3d(0, 12px, 0);
+            opacity: 1;
+         }
+         @media screen and (max-width: 400px) {
+            top: 58px;
+         }
       }
 
       &__action {
          bottom: 40px;
          opacity: 0;
          font-size: 18px;
+         @include media-breakpoint-down(md) {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+         }
+         @media screen and (max-width: 400px) {
+            bottom: 30px;
+         }
       }
 
       &__icon {
@@ -64,6 +96,12 @@
          opacity: 0;
          transition: 0.45s ease;
          color: $accent;
+         @include media-breakpoint-down(md) {
+            opacity: 1;
+         }
+         @media screen and (max-width: 400px) {
+            top: calc(50% - 10px);
+         }
       }
 
       &:hover {
@@ -87,11 +125,44 @@
          .s-portfolio-box__action {
             transform: translate3d(0, -12px, 0);
             opacity: 1;
+            @include media-breakpoint-down(md) {
+               transform: translate3d(0, 0, 0);
+            }
          }
 
          .s-portfolio-box__icon {
             opacity: 1;
          }
       }
+
+      @include media-breakpoint-down(lg) {
+         margin-bottom: 25px;
+         max-width: 360px;
+      }
+      @include media-breakpoint-down(sm) {
+
+         margin-left: auto;
+         margin-right: auto;
+      }
    }
+
+   @media screen and (min-width: 991px) and (max-width: 1199px) {
+      div[class^="col-"] {
+         &:nth-child(odd) {
+            .s-portfolio-box {
+               margin-right: 0;
+               margin-left: auto;
+            }
+
+         }
+
+         &:nth-child(even) {
+            .s-portfolio-box {
+               margin-left: 0;
+               margin-right: auto;
+            }
+         }
+      }
+   }
+
 }

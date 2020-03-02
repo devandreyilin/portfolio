@@ -43,6 +43,7 @@
          <div class="flex-center">
             <div class="page-header-composition">
                <p>Привет! Мое имя - Андрей Ильин, и я</p>
+
                <h1 class="h1-title">Full-Stack Разработчик</h1>
                <p>Создание современных и адаптивных веб-сайтов</p>
                <div class="icon-vk"></div>
@@ -163,7 +164,7 @@
 
          <div class="container">
             <div class="row s-portfolio-row">
-               <div class="col-lg-4 col-md-6 col-sm-8 offset-2 offset-sm-0">
+               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <a href="/demo/pizza/" class="s-portfolio-box"
                      target="_blank">
                      <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
@@ -173,7 +174,7 @@
                      <span class="icon-click s-portfolio-box__icon"></span>
                   </a>
                </div>
-               <div class="col-lg-4 col-md-6 col-sm-8 offset-2 offset-sm-0">
+               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <a href="/demo/pizza/" class="s-portfolio-box"
                      target="_blank">
                      <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
@@ -183,7 +184,7 @@
                      <span class="icon-click s-portfolio-box__icon"></span>
                   </a>
                </div>
-               <div class="col-lg-4 col-md-6 col-sm-8 offset-2 offset-sm-0">
+               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <a href="/demo/pizza/" class="s-portfolio-box"
                      target="_blank">
                      <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
@@ -220,9 +221,11 @@
             <div class="row">
                <div class="col-lg-6 offset-lg-3">
                   <form id="form-callback" class="s-callback-form">
-                     <input type="text" name="name" class="s-callback-form__field"
+                     <input type="text" name="name" required
+                            class="s-callback-form__field"
                             placeholder="Ваше имя...">
-                     <input type="email" name="email" class="s-callback-form__field"
+                     <input type="email" name="email" required
+                            class="s-callback-form__field"
                             placeholder="Ваша почта...">
                      <select name="services" id="selectize"
                              class="s-callback-form__field s-callback-form__select">
@@ -233,7 +236,8 @@
                         <option>Другое</option>
                      </select>
                      <textarea class="s-callback-form__field" name="message" rows="5"
-                               placeholder="Текст сообщения..."></textarea>
+                               placeholder="Текст сообщения..."
+                               required></textarea>
                      <input type="submit" class="button" value="Отправить">
 
                      <div class="s-callback-form__success">
