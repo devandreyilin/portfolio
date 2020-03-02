@@ -9,6 +9,7 @@
       background-color: #000;
       transition: $trs;
       border-radius: 2px;
+      margin-bottom: 25px;
 
       &__img {
          position: absolute;
@@ -19,8 +20,7 @@
          transition: $trs;
          opacity: .9;
          @include media-breakpoint-down(md) {
-            filter: blur(2px);
-            opacity: .8;
+            opacity: .55;
          }
       }
 
@@ -75,7 +75,7 @@
       }
 
       &__action {
-         bottom: 40px;
+         bottom: 25px;
          opacity: 0;
          font-size: 18px;
          @include media-breakpoint-down(md) {
@@ -89,7 +89,7 @@
 
       &__icon {
          position: absolute;
-         top: calc(50% - 18px);
+         top: calc(50% - 12px);
          left: calc(50% - 18px);
          user-select: none;
          font-size: 36px;
@@ -99,17 +99,13 @@
          @include media-breakpoint-down(md) {
             opacity: 1;
          }
-         @media screen and (max-width: 400px) {
-            top: calc(50% - 10px);
-         }
       }
 
       &:hover {
          color: $text-light;
 
          .s-portfolio-box__img {
-            filter: blur(2px);
-            opacity: .8;
+            opacity: .55;
          }
 
          .s-portfolio-box__h4-title {
@@ -136,7 +132,6 @@
       }
 
       @include media-breakpoint-down(lg) {
-         margin-bottom: 25px;
          max-width: 360px;
       }
       @include media-breakpoint-down(sm) {
