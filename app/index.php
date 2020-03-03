@@ -63,14 +63,13 @@
    <!-- page-content -->
    <main id="page-content" class="page-content">
       <nav id="main-nav" class="main-nav">
+         <button id="menu-button"
+                 class="menu-button"><span></span></button>
          <div class="container">
             <div class="row">
                <div class="col-12 main-nav-wrap">
                   <p class="main-nav__logo">{ Веб-разработка }</p>
                   <!-- /.main-logo -->
-
-                  <button id="menu-button"
-                          class="menu-button"><span></span></button>
                   <ul class="main-menu">
                      <li class="main-menu__item">
                         <a href="#page-header" class="main-menu__link">Главная</a>
@@ -232,7 +231,7 @@
             <div class="row">
                <div class="col-lg-6 offset-lg-3">
                   <form id="form-callback" class="s-callback-form">
-                     <input type="text" name="name" required
+                     <input type="text" name="name"
                             class="s-callback-form__field"
                             placeholder="Ваше имя...">
                      <input type="email" name="email" required

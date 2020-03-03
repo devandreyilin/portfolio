@@ -13,6 +13,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: .5s ease;
 
       @include media-breakpoint-down(xs) {
          padding: 0;
@@ -20,6 +21,17 @@
          position: fixed;
          top: 0;
          left: 0;
+         pointer-events: none;
+         opacity: 0;
+         z-index: -1;
+         transform: translateY(-100%);
+      }
+
+      &--visible {
+         transform: translateY(0);
+         z-index: 3;
+         pointer-events: initial;
+         opacity: 1;
       }
    }
 
@@ -63,6 +75,10 @@
             color: $accent;
          }
       }
+
+      @include media-breakpoint-down(xs) {
+         width: 100%;
+      }
    }
 
    &__link {
@@ -73,6 +89,10 @@
       transition: $trs;
       @include media-breakpoint-down(md) {
          padding: 17px 13px;
+      }
+      @include media-breakpoint-down(xs) {
+         width: 100%;
+         text-align: center;
       }
    }
 
@@ -85,14 +105,83 @@
       width: 100%;
       transition: 0.5s ease;
       background-color: $white;
-      user-select: none;
-      opacity: 0;
-      z-index: -1;
+   }
+}
+
+.menu-button {
+   display: none;
+   opacity: 0;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   right: 10px;
+   top: 15px;
+   width: 55px;
+   height: 55px;
+   padding: 5px;
+   border-radius: 50%;
+   background-color: $accent;
+   cursor: pointer;
+   z-index: 4;
+   transition: $trs;
+
+   &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150%;
+      height: 150%;
+      border-radius: 50%;
+   }
+
+   @include media-breakpoint-down(xs) {
+      display: flex;
+      opacity: 1;
+   }
+
+   span {
+      display: block;
+      position: absolute;
+      width: 23px;
+      height: 2px;
+      background-color: #fafafa;
+      transition: $trs;
+
+      &:before, &::after {
+         display: block;
+         position: absolute;
+         width: 23px;
+         height: 2px;
+         background-color: #fafafa;
+      }
+
+      &:before {
+         content: '';
+         top: -7px;
+      }
+
+      &:after {
+         content: '';
+         top: 7px;
+      }
    }
 
    &--visible {
-      z-index: 3;
-      user-select: initial;
-      opacity: 1;
+      span {
+         transform: rotate(45deg);
+
+         &:before {
+            top: 0;
+            transform: rotate(0);
+         }
+
+         &:after {
+            top: 0;
+            transform: rotate(90deg);
+         }
+      }
    }
 }

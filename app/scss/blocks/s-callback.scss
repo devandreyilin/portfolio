@@ -9,7 +9,7 @@
       &__field {
          display: block;
          width: 100%;
-         padding: 12px 15px;
+         padding: 14px 15px;
          border-radius: 2px;
          margin-bottom: 15px;
          border: 1px solid #d0d0d0;
@@ -23,11 +23,11 @@
          .selectize-input,
          .selectize-input input {
             font-size: inherit;
-            line-height: 1.2;
+            line-height: 1;
             color: $text-dark;
 
             .option {
-               padding: 12px 15px;
+               padding: 14px 15px;
                cursor: pointer;
                opacity: .8;
 
@@ -39,7 +39,7 @@
          }
 
          .selectize-input {
-            padding: 12px 15px;
+            padding: 14px 15px;
             border-radius: 2px;
             box-shadow: none;
          }
@@ -65,24 +65,35 @@
          text-align: center;
          font-family: $default-font;
          background-color: $white;
-         box-shadow: 0 2px 3px 1px rgba(0,0,0,.25);
+         box-shadow: 0 2px 3px 1px rgba(0, 0, 0, .25);
          font-size: 18px;
          transition: .8s ease;
          opacity: 0;
          z-index: -1;
          user-select: none;
+
          p {
             padding: 26px 15px;
             margin-bottom: 0;
+
             span {
                color: $accent;
             }
+            @include media-breakpoint-down(sm) {
+               padding: 28px 5px;
+            }
          }
+
          &--visible {
             transform: translate(-50%, 0);
             user-select: initial;
             z-index: 3;
             opacity: 1;
+         }
+
+         @include media-breakpoint-down(sm) {
+            font-size: 16px;
+            top: 0;
          }
       }
    }
