@@ -174,9 +174,19 @@
                   </a>
                </div>
                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <a href="/demo/pizza/" class="s-portfolio-box"
+                     target="_blank">
+                     <img src="./img/item-2.jpg" class="s-portfolio-box__img img-cover" alt="Брендинговое Агенство">
+                     <h4 class="h4-title s-portfolio-box__h4-title">Заказ<span>Пиццы</span></h4>
+                     <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
+                     <p class="s-portfolio-box__action">Кликните для перехода</p>
+                     <span class="icon-click s-portfolio-box__icon"></span>
+                  </a>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <a href="/demo/take/" class="s-portfolio-box"
                      target="_blank">
-                     <img src="./img/item-2.jpg" class="s-portfolio-box__img img-cover" alt="Реклама Приложения">
+                     <img src="./img/item-3.jpg" class="s-portfolio-box__img img-cover" alt="Реклама Приложения">
                      <h4 class="h4-title s-portfolio-box__h4-title">Реклама<span>Приложения</span></h4>
                      <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
                      <p class="s-portfolio-box__action">Кликните для перехода</p>
@@ -186,7 +196,7 @@
                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <a href="/demo/wdm/" class="s-portfolio-box"
                      target="_blank">
-                     <img src="./img/item-1.jpg" class="s-portfolio-box__img img-cover" alt="Салон Красоты">
+                     <img src="./img/item-4.jpg" class="s-portfolio-box__img img-cover" alt="Салон Красоты">
                      <h4 class="h4-title s-portfolio-box__h4-title">Салон<span>Красоты</span></h4>
                      <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
                      <p class="s-portfolio-box__action">Кликните для перехода</p>
@@ -197,7 +207,7 @@
                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                   <a href="/demo/business/" class="s-portfolio-box"
                      target="_blank">
-                     <img src="./img/item-4.jpg" class="s-portfolio-box__img img-cover" alt="Салон Красоты">
+                     <img src="./img/item-5.jpg" class="s-portfolio-box__img img-cover" alt="Салон Красоты">
                      <h4 class="h4-title s-portfolio-box__h4-title">Реклама<span>Хостинга</span></h4>
                      <p class="s-portfolio-box__test-ex">*тестовый вариант</p>
                      <p class="s-portfolio-box__action">Кликните для перехода</p>
