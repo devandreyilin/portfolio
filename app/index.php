@@ -124,10 +124,10 @@
                      <i class="icon-gear icon"></i>
                      <h3 class="h3-title s-services-card__h3-title">Программирование</h3>
                      <ul class="s-services-card__list">
-                        <li class="s-services-card__item">PHP</li>
-                        <li class="s-services-card__item">WordPress</li>
                         <li class="s-services-card__item">JavaScript(jQuery)</li>
                         <li class="s-services-card__item">Gulp.js</li>
+                        <li class="s-services-card__item">PHP</li>
+                        <li class="s-services-card__item">WordPress</li>
                      </ul>
                   </div>
                   <!-- /.s-services-card -->
