@@ -61,8 +61,8 @@
       &:before {
          top: 0;
          left: 0;
-         border-top: 6px solid rgba(255, 255, 255, .75);
-         border-left: 6px solid rgba(255, 255, 255, .75);
+         border-top: 5px solid rgba(255, 255, 255, .75);
+         border-left: 5px solid rgba(255, 255, 255, .75);
          transform: translate(-45px, -50px);
          border-top-left-radius: 2px;
       }
@@ -70,8 +70,8 @@
       &:after {
          bottom: 0;
          right: 0;
-         border-bottom: 6px solid rgba(255, 255, 255, .75);
-         border-right: 6px solid rgba(255, 255, 255, .75);
+         border-bottom: 5px solid rgba(255, 255, 255, .75);
+         border-right: 5px solid rgba(255, 255, 255, .75);
          transform: translate(45px, 50px);
          border-bottom-right-radius: 2px;
       }
