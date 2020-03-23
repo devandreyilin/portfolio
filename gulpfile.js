@@ -12,7 +12,7 @@ let gulp = require('gulp'),
 
 gulp.task('browser-sync', function () {
    browserSync({
-      proxy: "web-dev.local",
+      proxy: "portfolio",
       // server: {
       //    baseDir: './app'
       // },
