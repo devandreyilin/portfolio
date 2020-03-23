@@ -22,8 +22,8 @@
          .selectize-dropdown,
          .selectize-input,
          .selectize-input input {
-            font-size: inherit;
-            line-height: 1;
+            font-size: 16px;
+            line-height: 19px;
             color: $text-dark;
 
             .option {
@@ -42,9 +42,6 @@
             padding: 14px 15px;
             border-radius: 2px;
             box-shadow: none;
-            .item {
-               line-height: 19px;
-            }
          }
 
          .selectize-dropdown {
