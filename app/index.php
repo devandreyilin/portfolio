@@ -43,7 +43,6 @@
          <div class="flex-center">
             <div class="page-header-composition">
                <p>Привет! Мое имя - Андрей Ильин, и я</p>
-
                <h1 class="h1-title">Full-Stack Разработчик</h1>
                <p>Создание современных и адаптивных веб-сайтов</p>
                <div class="icon-vk"></div>
