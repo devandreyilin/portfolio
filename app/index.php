@@ -140,7 +140,7 @@
                         <li class="s-services-card__item">Adobe Photoshop</li>
                         <li class="s-services-card__item">Adobe Illustrator</li>
                         <li class="s-services-card__item">Inkscape</li>
-                        <li class="s-services-card__item">Figma</li>
+                        <li class="s-services-card__item">Avocode / Zeplin</li>
                      </ul>
                   </div>
                   <!-- /.s-services-card -->
