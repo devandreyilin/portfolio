@@ -41,8 +41,8 @@
       text-transform: uppercase;
       transition: $trs;
       margin-bottom: 0;
-      cursor: pointer;
       white-space: nowrap;
+      cursor: default;
 
       &:hover {
          color: $accent;

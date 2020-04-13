@@ -1,47 +1,49 @@
+"use strict";
+
 $(function () {
-
    // Selectize
-   const $select = $('#selectize').selectize();
-
-   // Отключение input
+   var $select = $('#selectize').selectize(); // Отключение input
    // $('.selectize-input input').prop('disabled', true);
 
    function callbackForm() {
       // Модальное окно при успешной отработке формы
-      let successDiv = $('.s-callback-form__success');
+      var successDiv = $('.s-callback-form__success');
       successDiv.on('click', function (e) {
-         let th = $(this);
+         var th = $(this);
+
          if (th.hasClass('s-callback-form__success--visible')) {
             th.removeClass('s-callback-form__success--visible');
          }
-      });
-      // Скрытие модального окна при клике вне него
-      $(document).mouseup(function (e) { // событие клика по веб-документу
-         let div = successDiv; // тут указываем ID элемента
+      }); // Скрытие модального окна при клике вне него
+
+      $(document).mouseup(function (e) {
+         // событие клика по веб-документу
+         var div = successDiv; // тут указываем ID элемента
+
          if (!div.is(e.target) // если клик был не по нашему блоку
-             && div.has(e.target).length === 0) { // и не по его дочерним элементам
+             && div.has(e.target).length === 0) {
+            // и не по его дочерним элементам
             div.removeClass('s-callback-form__success--visible'); // скрываем его
          }
-      });
+      }); // E-mail Ajax Send
 
-      // E-mail Ajax Send
-      $('#form-callback').submit(function () { //Change
-         let th = $(this);
+      $('#form-callback').submit(function () {
+         //Change
+         var th = $(this);
          $.ajax({
             type: "POST",
-            url: "/mail.php", //Change
+            url: "/mail.php",
+            //Change
             data: th.serialize()
          }).done(function () {
             successDiv.addClass('s-callback-form__success--visible');
             setTimeout(function () {
                successDiv.removeClass('s-callback-form__success--visible');
             }, 5000);
-
             setTimeout(function () {
                // Done Functions
                // Очистка кэша selectize
                $select[0].selectize.clear();
-
                th.trigger("reset");
             }, 1000);
          });
@@ -49,59 +51,62 @@ $(function () {
       });
    }
 
-   callbackForm();
+   callbackForm(); // Настройка меню
 
-   // Настройка меню
    function menuSettings() {
       $('.main-menu__link[href^="#"]').on('click', goToAnchor);
       $('a[href^="#"].page-header-scroll-down').on('click', goToAnchor);
 
       function goToAnchor(e) {
-         const th = $(this);
-         let sc = $(this).attr("href"),
-             dn = $(sc).offset().top;
+         var th = $(this);
+         var sc = $(this).attr("href"),
+             dn = $(sc).offset().top; // Изменение отступов для разных экранов(минус высота меню)
 
-         // Изменение отступов для разных экранов(минус высота меню)
          if ($(window).width() > 1200) {
             dn = $(sc).offset().top - 48;
          } else if ($(window).width() < 1200 && $(window).width() > 768) {
             dn = $(sc).offset().top - 46.25;
          } else if ($(window).width() < 768) {
             dn = $(sc).offset().top + 1;
-         }
+         } // Анимация только для настольных экранов
 
-         // Анимация только для настольных экранов
+
          console.log(th.hasClass());
+
          if ($(window).width() >= 992) {
-            $('html, body').stop().animate({scrollTop: dn}, 1000);
+            $('html, body').stop().animate({
+               scrollTop: dn
+            }, 1000);
          } else {
             if (th.hasClass('page-header-scroll-down')) {
-               $('html, body').stop().animate({scrollTop: dn}, 1000);
+               $('html, body').stop().animate({
+                  scrollTop: dn
+               }, 1000);
             } else {
-               $('html, body').stop().animate({scrollTop: dn}, 0);
+               $('html, body').stop().animate({
+                  scrollTop: dn
+               }, 0);
             }
          }
 
          e.preventDefault();
-      }
+      } // Подсветка пунктов меню
 
-      // Подсветка пунктов меню
+
       $(window).on('scroll', itemHighlight);
       $(window).on('scroll', addShadowToMenuWrap);
-
-      const activeClass = 'main-menu__item--active';
-      const mainNav = $('.main-nav');
+      var activeClass = 'main-menu__item--active';
+      var mainNav = $('.main-nav');
 
       function itemHighlight() {
-         let scrollTop = $(window).scrollTop(),
+         var scrollTop = $(window).scrollTop(),
              winHeight = $(window).height(),
              pageHeader = $('#page-header').offset().top,
-             section1 = $('#s-services').offset().top - (winHeight * 0.3),
-             section2 = $('#s-portfolio').offset().top - (winHeight * 0.3),
-             section3 = $('#s-callback').offset().top - (winHeight * 0.3),
-             pageFooter = $('#page-footer').offset().top;
+             section1 = $('#s-services').offset().top - winHeight * 0.3,
+             section2 = $('#s-portfolio').offset().top - winHeight * 0.3,
+             section3 = $('#s-callback').offset().top - winHeight * 0.3,
+             pageFooter = $('#page-footer').offset().top; // Проверка положения секции относительно других и добавление подсветки
 
-         // Проверка положения секции относительно других и добавление подсветки
          if (scrollTop >= pageHeader && scrollTop < section1) {
             $('.main-menu__link[href^="#"]').parent().removeClass(activeClass);
             $('.main-menu__link[href="#page-header"]').parent().addClass(activeClass);
@@ -120,51 +125,46 @@ $(function () {
       }
 
       function addShadowToMenuWrap() {
-         if ($(window).scrollTop() > (mainNav.offset().top - mainNav.height())) {
+         if ($(window).scrollTop() > mainNav.offset().top - mainNav.height()) {
             mainNav.css('boxShadow', '0 1px 6px rgba(0,0,0,.2)');
          } else {
             mainNav.css('boxShadow', 'none');
          }
-      }
+      } // Адаптивное меню
 
-      // Адаптивное меню
+
       function showOnMobile() {
          // Установка 100vh в px
-         const pageHeader = $('#page-header');
-         pageHeader.css('height', `${$(window).height()}px`);
-
-         const menuButton = $('.menu-button'),
+         var pageHeader = $('#page-header');
+         pageHeader.css('height', "".concat($(window).height(), "px"));
+         var menuButton = $('.menu-button'),
              mainMenu = $('.main-menu'),
              overlay = $('#overlay'),
              navWrap = $('.main-nav-wrap');
-
          menuButton.on('click', function () {
-            const th = $(this);
+            var th = $(this);
             th.toggleClass('menu-button--visible');
             navWrap.toggleClass('main-nav-wrap--visible');
-            overlay.toggleClass('overlay--visible');
+            overlay.toggleClass('overlay--visible'); // Проверка на открытое меню
 
-            // Проверка на открытое меню
             if (navWrap.hasClass('main-nav-wrap--visible')) {
                $(document).on('click', hideMenuAndOverlay);
                $(document).on('scroll', hideMenuAndOverlay);
             }
-         });
+         }); // Функция, срабатывающая при клике вне меню
 
-         // Функция, срабатывающая при клике вне меню
-         function hideMenuAndOverlay(e) { // событие клика по веб-документу
+         function hideMenuAndOverlay(e) {
+            // событие клика по веб-документу
             if (!navWrap.is(e.target) // если клик был не по нашему блоку
-                && navWrap.has(e.target).length === 0
-                && !menuButton.is(e.target)) { // и не по его дочерним элементам
+                && navWrap.has(e.target).length === 0 && !menuButton.is(e.target)) {
+               // и не по его дочерним элементам
                overlay.removeClass('overlay--visible');
-               navWrap.removeClass('main-nav-wrap--visible');
-               // navigation.fadeOut(200); // скрываем его
-               menuButton.removeClass('menu-button--visible');
-               // overlay.fadeOut(200); // скрываем его
+               navWrap.removeClass('main-nav-wrap--visible'); // navigation.fadeOut(200); // скрываем его
+
+               menuButton.removeClass('menu-button--visible'); // overlay.fadeOut(200); // скрываем его
             }
          }
       }
-
 
       showOnMobile();
       itemHighlight();
@@ -172,12 +172,10 @@ $(function () {
    }
 
    function copyrightChangeYear() {
-      let year = new Date().getFullYear(),
+      var year = new Date().getFullYear(),
           yearBlock = $('.page-footer .copyright .year');
-
       yearBlock.html(year);
    }
-
 
    copyrightChangeYear();
    menuSettings();
