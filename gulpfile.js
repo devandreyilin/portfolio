@@ -8,8 +8,7 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     notify = require('gulp-notify'),
     rsync = require('gulp-rsync'),
-    sourcemaps = require('gulp-sourcemaps'),
-    babel = require('gulp-babel');
+    sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('browser-sync', function () {
    browserSync({
@@ -45,8 +44,7 @@ gulp.task('scripts', function () {
       './app/js/_custom.js', // Always at the end
    ])
        .pipe(concat('scripts.min.js'))
-       .pipe(babel({presets: ['@babel/preset-env']}))
-       .pipe(uglify()) // Minify js (opt.)
+       // .pipe(uglify()) // Minify js (opt.)
        .pipe(gulp.dest('./app/js'))
        .pipe(browserSync.reload({stream: true}))
 });
